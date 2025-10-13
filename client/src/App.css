@@ -60,6 +60,7 @@ body {
     rgba(255, 255, 255, 0.6) 100%
   );
 }
+
 :root {
   --mask-position-x: 50%;
   --mask-position-y: 0%;
