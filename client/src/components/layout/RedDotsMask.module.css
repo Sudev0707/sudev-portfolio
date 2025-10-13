@@ -1,0 +1,91 @@
+.maskContainer {
+position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  z-index: -1;
+  border: 4ps solid black;
+
+  /* Smaller bright circle with strong white fade */
+  background: radial-gradient(
+    circle at var(--mask-position-x, 50%) var(--mask-position-y, 0%),
+    rgba(255, 255, 255, 0) 20%,
+    /* smaller visible center */ rgba(255, 255, 255, 0.9) 45%,
+    /* earlier and stronger white fade */ rgba(255, 255, 255, 1) 60%,
+    /* fully white starts */ rgba(255, 255, 255, 1) 100%
+      /* completely white at edges */
+  );
+
+  /* Mask - smaller circular reveal area, rest hidden */
+  -webkit-mask-image: radial-gradient(
+    circle at var(--mask-position-x, 50%) var(--mask-position-y, 0%),
+    rgba(0, 0, 0, 1) 15%,
+    /* solid center (smaller now) */ rgba(0, 0, 0, 0.5) 35%,
+    /* starts fading earlier */ rgba(0, 0, 0, 0.2) 50%,
+    /* smooth transition */ rgba(0, 0, 0, 0) 60%,
+    /* fades out */ rgba(0, 0, 0, 0) 100% /* fully transparent edges */
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: radial-gradient(
+    circle at var(--mask-position-x, 50%) var(--mask-position-y, 0%),
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 0.5) 35%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
+.dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 4;
+  background-size: var(--dots-size, 10px) var(--dots-size, 10px);
+  background-image: radial-gradient(
+    var(--dots-color, red) 1px,
+    transparent 1px
+  );
+}
+
+/* Spacer / second child div */
+.spacer {
+  display: flex; /* display-flex */
+  min-width: 0; /* min-width-0 */
+  width: 100%; /* fill-width */
+  position: relative; /* position-relative */
+  min-height: var(--static-space-16, 64px); /* fallback if CSS variable not defined */
+
+}
+
+
+.fadeTop,
+.fadeBottom {
+  position: fixed;
+  width: 100%;
+  height: var(--fade-height, 80px);
+  z-index: 9;
+  background: linear-gradient(
+    var(--gradient-direction, 180deg),
+    var(--base-color, #fff),
+    transparent
+  );
+}
+
+.fadeTop {
+  top: 0;
+}
+
+.fadeBottom {
+  bottom: 0;
+}
