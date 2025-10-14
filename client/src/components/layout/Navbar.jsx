@@ -5,7 +5,7 @@ const Navbar = () => {
   const [time, setTime] = useState(new Date());
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [darkMode, setDarkMode] = useState(false); // dark/light mode
+  const [darkMode, setDarkMode] = useState(true); // dark/light mode
 
   // clock
   useEffect(() => {
@@ -29,6 +29,7 @@ const Navbar = () => {
     setDarkMode(!darkMode);
     document.body.classList.toggle("dark-mode", !darkMode);
   };
+
 
   return (
     <nav className={`navbar ${show ? "show" : "hide"}`}>

@@ -1,89 +1,36 @@
- 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
-  background: #fff;
-  color: #111;
+/* background: transparent; */
+  /* color: #111; */
+  box-sizing: border-box;
+  
 }
 
-.hero {
+.app {
   position: relative;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  min-height: 100vh;
   overflow: hidden;
 }
 
-
-/* .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-
-  background-image: radial-gradient(rgb(255, 50, 50) 1px, transparent 1px);
-  background-size: 2.2px 2.2px;
-  opacity: 0.5;
-
-
-  mask-size: 100% 100%;
-  mask-image: radial-gradient(var(--mask-radius) at var(--mask-position-x) var(--mask-position-y), black 0, transparent 100%);
-} */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  /* Dot background */
-  background-image: radial-gradient(rgb(255, 50, 50) 1px, transparent 1px);
-  background-size: 2.2px 2.2px;
-  opacity: 0.5;
-
-  /* Circle mask */
-  mask-size: 100% 100%;
-  mask-image: radial-gradient(var(--mask-radius) at var(--mask-position-x) var(--mask-position-y), black 0, transparent 100%);
-  -webkit-mask-image: radial-gradient(var(--mask-radius) at var(--mask-position-x) var(--mask-position-y), black 0, transparent 100%);
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  mix-blend-mode: lighten;
-  background: radial-gradient(
-    circle at var(--mask-position-x) var(--mask-position-y),
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
-}
-:root {
-  --mask-position-x: 50%;
-  --mask-position-y: 0%;
-  --mask-radius: 100vh;
-}
-
-@media (max-width: 768px) {
-  :root {
-    --mask-radius: 120vh;
-    --mask-position-y: 10%;
-  }
-}
-
-
-
-
-
-/* hero text styles */
-.hero-content {
+/* 🎨 Hero Text Section */
+.page-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.hero-content {
   max-width: 900px;
   padding: 2rem;
 }
+
+/* ... keep all your text, icons, and stats styles unchanged ... */
 
 .recent-project {
   display: inline-block;
@@ -93,10 +40,7 @@ body {
   font-size: 14px;
   color: #333;
   margin-bottom: 24px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-.recent-project span {
-  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .hero-content h1 {
@@ -112,7 +56,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -129,7 +72,6 @@ body {
   transform: scale(1.2);
 }
 
-/* stats section */
 .stats {
   display: flex;
   justify-content: center;
@@ -143,7 +85,7 @@ body {
   border-radius: 10px;
   font-size: 14px;
   color: #444;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 .stat-box strong {
   font-size: 18px;

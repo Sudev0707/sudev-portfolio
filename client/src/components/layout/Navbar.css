@@ -8,10 +8,12 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 70px;
+
   background-color: transparent; /* transparent navbar */
   color: #000;
   transition: top 0.3s ease, color 0.3s ease, background-color 0.3s ease;
   z-index: 1000;
+   box-sizing: border-box;
 }
 
 /* show/hide */
