@@ -151,12 +151,12 @@
 .email-copy[data-copied="true"] .copied-tooltip {
   display: block;
 }
-
+/* 
 .copy-icon {
   color: #ff4b4b;
   font-weight: 800;
   transition: color 0.3s ease;
-}
+} */
 
 .email-copy:hover .copy-icon {
   color: #ec4899;
