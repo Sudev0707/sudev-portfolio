@@ -63,7 +63,7 @@ const Navbar = ({}) => {
           className={`flex gap-1.5 items-center p-1 rounded-4xl transition-colors transition-shadow duration-300 border nav_Menu ${
             darkMode
               ? "bg-gray-900 border-gray-700 shadow-2xl"
-              : "bg-gray-100 border-gray-200 shadow-xl"
+              : "bg-white  border-gray-200 shadow-xl"
           }`}
         >
           <Link
@@ -101,7 +101,7 @@ const Navbar = ({}) => {
           <Link
             to="/messages"
             className={`flex items-center gap-2 px-4 py-2 rounded-4xl transition-all duration-300 Nav_Links ${
-              isActive("/messages")
+              isActive("/blogs")
                 ? darkMode
                   ? "bg-gray-700 text-white"
                   : "bg-gray-300 text-black"
@@ -110,7 +110,7 @@ const Navbar = ({}) => {
                 : "text-gray-700 hover:bg-gray-200 hover:text-black"
             }`}
           >
-            <MessageCircle className="w-4 h-4" /> Messages
+            <MessageCircle className="w-4 h-4" /> Blogs
           </Link>
 
           <Link

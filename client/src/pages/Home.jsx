@@ -23,28 +23,36 @@ const Home = () => {
     // hero
     <div className="page-content flex ">
       <div className="hero-content border-2">
+        {/*  */}
         <div className="profile-info flex items-center rounded-xl p-3 gap-4">
-          {/* Open to Work button */}
-          <div className="flex items-center gap-2 px-6 py-2.5 rounded-full btn_OpenToWork select-none">
+          <div className="flex items-center gap-2 px-6 py-2.5 rounded-full btn_OpenToWork select-none ">
             <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
             <p className="text-md font-semibold">
-              Open to Work <span>✨</span>
+              Open to Work <span>🚀</span>
             </p>
           </div>
 
-          {/* Email Button */}
-          <div className=" rounded-full">
+          <div className="rounded-full">
             <AnimatedBorderButton email="sudev97@example.com" size="default" />
           </div>
         </div>
+        {/*  */}
+        <section class="hero-section">
+          <h1 className="hero-title">
+            Turning Vision into Intelligent Digital Experiences
+          </h1>
 
+          <h2 className="hero-subtitle">
+            Software Engineer • Full-Stack Developer • Creative Technologist
+          </h2>
 
-
-        <h1>Turning design concepts into functional builds</h1>
-        <p className="subtitle">
-          I design for difference — prioritizing clarity, delight, and genuine
-          user connection.
-        </p>
+          <p className="hero-description">
+            I’m a results-driven professional crafting human-centered web and
+            mobile solutions. With a blend of creativity, strategy, and
+            technical precision, I help businesses and individuals transform
+            bold ideas into scalable, elegant products.
+          </p>
+        </section>
 
         <div className="social-icons">{/* Place social icons here */}</div>
 
@@ -60,7 +68,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>kjkbfwkjfkr</div>
+      <div className="border-2 container ">kjkbfwkjfkr</div>
     </div>
   );
 };

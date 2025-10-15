@@ -5,41 +5,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  /* justify-content: center; */
+  /* height: 100vh; */
   text-align: center;
   /* background: #ec4899; */
 }
 
 .hero-content {
-  max-width: 900px;
-  padding: 2rem;
+  margin: 150px auto;
+  max-width: 1200px;
+  /* padding: 2rem; */
 }
 
-/* ... keep all your text, icons, and stats styles unchanged ... */
-
-.recent-project {
-  display: inline-block;
-  background: #fff0f0;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
-  margin: 0 0 16px;
-  line-height: 1.2;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 30px;
+/* --- Shiny button --- */
+.btn_OpenToWork {
+  border: 0.7px solid rgba(250, 54, 54, 0.526);
+  background-color: rgba(254, 124, 124, 0.245);
 }
 
 .social-icons {
@@ -79,143 +68,118 @@
 }
 
 /* --- */
-.profile-info {
+
+
+/* hero section  */
+
+.hero-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
   justify-content: center;
-  margin-top: 20px;
-}
-/* --- Shiny button --- */
-
-.btn_OpenToWork {
-  border: 0.7px solid rgba(250, 54, 54, 0.526);
-  background-color: rgba(254, 124, 124, 0.245);
-}
-/* --- Copy email section --- */
-.email-copy {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  border: 1px solid #464646;
-  border-radius: 9999px; /* Rounded Full */
-  transition: all 0.3s ease;
-  background: #151515;
+  text-align: center;
+  padding: 5rem 1.5rem;
+  transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-.email-copy p {
-  font-size: 16px;
-  font-weight: 500;
-  font-family: 'Courier New', Courier, monospace;
-}
-
-/* Dark Mode Overrides */
-@media (prefers-color-scheme: dark) {
-  .email-copy {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #555;
-  }
-
-  .copied-tooltip {
-    background-color: #444;
-  }
-}
-
-/* Hover effect */
-.email-copy:hover {
-  /* background-color: #e1e1e1; */
-  /* border: 1px solid #bbb; */
-}
-
-.email-copy:hover p {
-  /* color: #222; */
-}
-
-/* Copied Tooltip */
-.copied-tooltip {
-  /* display: none; */
-  position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #333;
-  color: #fff;
-  font-size: 12px;
-  padding: 5px 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.email-copy[data-copied="true"] .copied-tooltip {
-  display: block;
-}
-/* 
-.copy-icon {
-  color: #ff4b4b;
+/* --- Title --- */
+.hero-title {
   font-weight: 800;
-  transition: color 0.3s ease;
-} */
-
-.email-copy:hover .copy-icon {
-  color: #ec4899;
+  color: #111827; /* Gray-900 */
+  transition: color 0.5s ease;
+  line-height: 1.2;
+  font-size: 20px; 
 }
 
-
-/* ================ */
-
-/* Hero Section */
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
+/* --- Subtitle --- */
+.hero-subtitle {
+  font-weight: 600;
+  color: #374151; /* Gray-700 */
+  margin-top: 1rem;
+  transition: color 0.5s ease;
+  font-size: 1.5rem;
 }
 
-.hero-content p.subtitle {
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.services, .testimonials, .portfolio, .cta {
-  margin: 40px 0;
-}
-
-.service-cards, .testimonial-cards, .portfolio-gallery {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-}
-
-.service-card, .testimonial-card, .portfolio-item {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card p {
-  font-style: italic;
-}
-
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.cta button {
-  background-color: #007BFF;
-  color: white;
-  padding: 15px 30px;
+/* --- Description --- */
+.hero-description {
+  max-width: 800px;
+  color: #4b5563; /* Gray-600 */
+  margin-top: 1.5rem;
+  line-height: 1.7;
   font-size: 1rem;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 0.5s ease;
 }
 
-.cta button:hover {
-  background-color: #0056b3;
+/* --- Dark mode --- */
+@media (prefers-color-scheme: dark) {
+  .hero-title {
+    color: #f59e0b; /* Amber-500 */
+  }
+
+  .hero-subtitle {
+    color: #d97706; /* Amber-600 */
+  }
+
+  .hero-description {
+    color: #d1d5db; /* Gray-300 */
+  }
+}
+
+/* --- Responsive font sizes --- */
+@media (min-width: 640px) { /* Small screens */
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.75rem;
+  }
+  .hero-description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) { /* Medium */
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) { /* Large */
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  .hero-subtitle {
+    font-size: 2.5rem;
+  }
+  .hero-description {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 1280px) { /* Extra large */
+  .hero-title {
+    font-size: 5rem;
+  }
+  .hero-subtitle {
+    font-size: 3rem;
+  }
+  .hero-description {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out;
 }
