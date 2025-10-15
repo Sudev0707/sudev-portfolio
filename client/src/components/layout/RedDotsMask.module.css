@@ -69,23 +69,3 @@ position: absolute;
 }
 
 
-.fadeTop,
-.fadeBottom {
-  position: fixed;
-  width: 100%;
-  height: var(--fade-height, 80px);
-  z-index: 9;
-  background: linear-gradient(
-    var(--gradient-direction, 180deg),
-    var(--base-color, #fff),
-    transparent
-  );
-}
-
-.fadeTop {
-  top: 0;
-}
-
-.fadeBottom {
-  bottom: 0;
-}
