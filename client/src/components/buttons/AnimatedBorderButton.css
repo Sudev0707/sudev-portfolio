@@ -1,0 +1,33 @@
+/* Gradient border moving */
+@keyframes border-gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-border-gradient {
+  animation: border-gradient-move 3s linear infinite;
+}
+
+/* Button background sliding */
+@keyframes bg-slide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-bg-slide {
+  animation: bg-slide 4s linear infinite;
+}
+
+@keyframes spin-gradient {
+    0% {
+      background-position: 300% 300%;
+    }
+    50% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 300% 300%;
+    }
+  }
